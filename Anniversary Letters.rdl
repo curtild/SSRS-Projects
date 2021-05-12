@@ -122,7 +122,7 @@ ORDER BY MONTH_ID</CommandText>
     <ReportSection>
       <Body>
         <ReportItems>
-          <Tablix Name="Tablix2">
+          <Tablix Name="tablixLetter">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
@@ -135,9 +135,9 @@ ORDER BY MONTH_ID</CommandText>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Rectangle Name="Rectangle4">
+                        <Rectangle Name="rectLetter">
                           <ReportItems>
-                            <Textbox Name="Textbox5">
+                            <Textbox Name="txtAddressBlock">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -157,7 +157,6 @@ Fields!POSTALCODE.Value + ENVIRONMENT.NewLine + Environment.NewLine +
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox5</rd:DefaultName>
                               <Top>0.44527in</Top>
                               <Height>0.18889in</Height>
                               <Width>6.84167in</Width>
@@ -171,7 +170,7 @@ Fields!POSTALCODE.Value + ENVIRONMENT.NewLine + Environment.NewLine +
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <Textbox Name="Textbox7">
+                            <Textbox Name="txtDate">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -186,7 +185,6 @@ Environment.NewLine + Environment.NewLine</Value>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox7</rd:DefaultName>
                               <Top>0.14805in</Top>
                               <Height>0.26944in</Height>
                               <Width>6.84167in</Width>
@@ -201,7 +199,7 @@ Environment.NewLine + Environment.NewLine</Value>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <Textbox Name="Textbox8">
+                            <Textbox Name="txtSalutation">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -220,7 +218,6 @@ Environment.NewLine + Environment.NewLine +
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox8</rd:DefaultName>
                               <Top>0.64805in</Top>
                               <Height>0.22777in</Height>
                               <Width>6.84167in</Width>
@@ -235,7 +232,7 @@ Environment.NewLine + Environment.NewLine +
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <Image Name="img_Signature">
+                            <Image Name="imgSignature">
                               <Source>Embedded</Source>
                               <Value>Signature</Value>
                               <Sizing>FitProportional</Sizing>
@@ -249,7 +246,7 @@ Environment.NewLine + Environment.NewLine +
                                 </Border>
                               </Style>
                             </Image>
-                            <Textbox Name="Textbox1">
+                            <Textbox Name="txtPostScript">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -265,7 +262,6 @@ Environment.NewLine + Environment.NewLine +
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox1</rd:DefaultName>
                               <Top>1.48416in</Top>
                               <Height>0.73333in</Height>
                               <Width>6.84167in</Width>
@@ -280,7 +276,7 @@ Environment.NewLine + Environment.NewLine +
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <Textbox Name="Textbox9">
+                            <Textbox Name="txtClosing">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -294,7 +290,6 @@ Environment.NewLine + Environment.NewLine +
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox9</rd:DefaultName>
                               <Top>0.88971in</Top>
                               <Height>0.25in</Height>
                               <Width>6.84167in</Width>
@@ -376,7 +371,7 @@ Environment.NewLine + Environment.NewLine +
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="txt_Logo">
+            <Textbox Name="txtLogo">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -407,7 +402,7 @@ Environment.NewLine + Environment.NewLine +
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox4">
+            <Textbox Name="txtCompanyAddress">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -445,7 +440,6 @@ Environment.NewLine + Environment.NewLine +
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>0.46251in</Top>
               <Height>0.49722in</Height>
               <Width>1.64583in</Width>
@@ -472,7 +466,7 @@ Environment.NewLine + Environment.NewLine +
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="txt_Purpose">
+            <Textbox Name="txtPurpose">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -506,7 +500,7 @@ Environment.NewLine + Environment.NewLine +
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="txt_ReportCode">
+            <Textbox Name="txtReportID">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -543,7 +537,7 @@ Environment.NewLine + Environment.NewLine +
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="txt_Page">
+            <Textbox Name="txtNumPages">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -574,7 +568,7 @@ Environment.NewLine + Environment.NewLine +
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="txt_Author">
+            <Textbox Name="txtDeveloper">
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>

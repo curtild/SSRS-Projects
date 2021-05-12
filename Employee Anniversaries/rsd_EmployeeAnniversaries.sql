@@ -6,7 +6,7 @@ Report:
 Date:			
 	Jan 2021
 Purpose:		
-	Demo - Employee Anniversary Letters
+	Pulls Employee Anniversary Letters by Month
 Design Tool:	
 	SSRS/SSDT
 DBMS:			

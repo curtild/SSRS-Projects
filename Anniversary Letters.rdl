@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <Author>Lynn Curtis</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="srds_AdventureWorks2017">
+      <DataSourceReference>srds_AdventureWorks2017</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>c1416a21-7db9-4130-8639-097ff10b738e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="rsd_EmployeeAnniversaries">
+      <Query>
+        <DataSourceName>srds_AdventureWorks2017</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@MONTH">
+            <Value>=Parameters!MONTH.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT BUSINESSENTITYID, TITLE, FIRSTNAME, MIDDLENAME, LASTNAME, SUFFIX, JOBTITLE, EMAILADDRESS, ADDRESSLINE1, ADDRESSLINE2, CITY, STATEPROVINCENAME, COUNTRYREGIONNAME, POSTALCODE, DEPARTMENT, 
+                  STARTDATE, CURRENT_YEAR, ANNIVERSARY_YEAR
+FROM     v_Employee_StartDates
+WHERE  (MONTH(STARTDATE) = @MONTH)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BUSINESSENTITYID">
+          <DataField>BUSINESSENTITYID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TITLE">
+          <DataField>TITLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FIRSTNAME">
+          <DataField>FIRSTNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MIDDLENAME">
+          <DataField>MIDDLENAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LASTNAME">
+          <DataField>LASTNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SUFFIX">
+          <DataField>SUFFIX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JOBTITLE">
+          <DataField>JOBTITLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMAILADDRESS">
+          <DataField>EMAILADDRESS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESSLINE1">
+          <DataField>ADDRESSLINE1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESSLINE2">
+          <DataField>ADDRESSLINE2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CITY">
+          <DataField>CITY</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATEPROVINCENAME">
+          <DataField>STATEPROVINCENAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COUNTRYREGIONNAME">
+          <DataField>COUNTRYREGIONNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POSTALCODE">
+          <DataField>POSTALCODE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DEPARTMENT">
+          <DataField>DEPARTMENT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STARTDATE">
+          <DataField>STARTDATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CURRENT_YEAR">
+          <DataField>CURRENT_YEAR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ANNIVERSARY_YEAR">
+          <DataField>ANNIVERSARY_YEAR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="rsd_Months">
+      <Query>
+        <DataSourceName>srds_AdventureWorks2017</DataSourceName>
+        <CommandText>SELECT DISTINCT MONTH_ID, MONTH_NAME
+FROM     v_Employee_StartDates
+ORDER BY MONTH_ID</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="MONTH_ID">
+          <DataField>MONTH_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MONTH_NAME">
+          <DataField>MONTH_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>6.84167in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>7.50832in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle4">
+                          <ReportItems>
+                            <Textbox Name="Textbox5">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=iif(Fields!TITLE.Value&lt;&gt;"",Fields!TITLE.Value + " ","") + Fields!FIRSTNAME.Value + " " + iif(Fields!MIDDLENAME.Value&lt;&gt;"",Fields!MIDDLENAME.Value + " ","") + Fields!LASTNAME.Value 
++ Environment.NewLine +
+Fields!ADDRESSLINE1.Value + Environment.NewLine +
+iif(Fields!ADDRESSLINE2.Value&lt;&gt;"",Fields!ADDRESSLINE2.Value + Environment.NewLine,"") +
+Fields!CITY.Value + ", " + Fields!STATEPROVINCENAME.Value + " " +
+Fields!POSTALCODE.Value + ENVIRONMENT.NewLine + Environment.NewLine +
+"Dear " + Fields!FIRSTNAME.Value + "," + Environment.NewLine</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox5</rd:DefaultName>
+                              <Top>0.44527in</Top>
+                              <Height>0.18889in</Height>
+                              <Width>6.84167in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox7">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Format(CDate(Today()), "MMMM dd, yyyy") +
+Environment.NewLine + Environment.NewLine</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox7</rd:DefaultName>
+                              <Top>0.14805in</Top>
+                              <Height>0.26944in</Height>
+                              <Width>6.84167in</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox8">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="We sincerely congratulate you on completing 10 years of service! You are a consistent and reliable employee. Having you here as " + Fields!JOBTITLE.Value + " is truly our pleasure. " +
+ Environment.NewLine + Environment.NewLine +
+"Throughout the years we’ve witnessed your significant professional development. Hard work and diligence have earned you a respected place among employees. As your superiors admire you for your work, your colleagues also speak very highly of you. We are grateful to you for your service. " +
+Environment.NewLine + Environment.NewLine +
+"We expect you will continue to work with the same level of diligence and passion towards your work. We look forward to working with you for many years to come. " + Environment.NewLine + Environment.NewLine +
+"Once again, congratulations on your 10th anniversary as an esteemed employee." + Environment.NewLine</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox8</rd:DefaultName>
+                              <Top>0.64805in</Top>
+                              <Height>0.22777in</Height>
+                              <Width>6.84167in</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Image Name="img_Signature">
+                              <Source>Embedded</Source>
+                              <Value>Signature</Value>
+                              <Sizing>FitProportional</Sizing>
+                              <Top>1.13971in</Top>
+                              <Height>0.34445in</Height>
+                              <Width>1.05in</Width>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Image>
+                            <Textbox Name="Textbox1">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="Adventure Works - VP" + Environment.NewLine
++ Environment.NewLine
++ "P.S.  As a token of our appreciation please see your enclosed special anniversary gift."</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox1</rd:DefaultName>
+                              <Top>1.48416in</Top>
+                              <Height>0.73333in</Height>
+                              <Width>6.84167in</Width>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox9">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Sincerely,</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox9</rd:DefaultName>
+                              <Top>0.88971in</Top>
+                              <Height>0.25in</Height>
+                              <Width>6.84167in</Width>
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="BUSINESSENTITYID">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!BUSINESSENTITYID.Value</GroupExpression>
+                    </GroupExpressions>
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!BUSINESSENTITYID.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="Details" />
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>rsd_EmployeeAnniversaries</DataSetName>
+            <Height>7.50832in</Height>
+            <Width>6.84167in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>7.50832in</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Body>
+      <Width>6.84167in</Width>
+      <Page>
+        <PageHeader>
+          <Height>1.20973in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="txt_Logo">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>AdventureWorks</Value>
+                      <Style>
+                        <FontFamily>Abril Fatface</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <Color>MidnightBlue</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.20278in</Top>
+              <Height>0.25973in</Height>
+              <Width>1.64583in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>World Headquarters</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>555 Acme Rd.</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Acmeville, XX USA</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox4</rd:DefaultName>
+              <Top>0.46251in</Top>
+              <Height>0.49722in</Height>
+              <Width>1.64583in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>3pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.4in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="txt_Purpose">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>DEMO </Value>
+                      <Style>
+                        <FontFamily>Roboto Black</FontFamily>
+                        <FontSize>11pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.06944in</Top>
+              <Height>0.25in</Height>
+              <Width>0.53611in</Width>
+              <ToolTip>Proprietary Report</ToolTip>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>3pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txt_ReportCode">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>SR-140 </Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value>(Proprietary)</Value>
+                      <Style>
+                        <FontWeight>Normal</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.06944in</Top>
+              <Left>0.55417in</Left>
+              <Height>0.25in</Height>
+              <Width>1.55555in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txt_Page">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>= "Page " &amp; Globals!OverallPageNumber &amp; " of " &amp; Globals!OverallTotalPages</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.06944in</Top>
+              <Left>2.6364in</Left>
+              <Height>0.25in</Height>
+              <Width>1.15163in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txt_Author">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Report Developer:  Lynnetta Curtis</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.06944in</Top>
+              <Left>4.12692in</Left>
+              <Height>0.25in</Height>
+              <Width>2.30641in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <InteractiveHeight>13in</InteractiveHeight>
+        <InteractiveWidth>7.5in</InteractiveWidth>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="MONTH">
+      <DataType>String</DataType>
+      <Prompt>Select A Month:</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>rsd_Months</DataSetName>
+          <ValueField>MONTH_ID</ValueField>
+          <LabelField>MONTH_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>MONTH</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Signature">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAJkAAAA5CAYAAAAlQIlUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAd8SURBVHhe7ZyxSxxbFMavr0mRFJYxpBEShICNSJogG1KkSKGVXcB0VhJbO+uUViI2wS5dEpI+RVKkEEE2IFGw0X9ArPfNb9hvOZ43umsyszuz73xwmJk79557zznfPXP3zu5OdDKkQKBC/NM9BgKVIUgWqBxBskDlCJIFKkeQLFA5gmSByhEkC1SOIFmgcgTJApUjSBaoHEGyQOUIkgUqR5AsUDmCZIHKESQLVI5GkOz8/Dx9/fo1ra+vp+fPn6fHjx+niYmJnty7dy8vp06gfqjtlxZ//PiRdnZ20vfv39Px8XG3tD/a7XZ68uRJ9ypQB9Qqk/369Su9efMmTU1NpWfPnqX3799fIVir1Upv375NX758SWdnZ4n5gezt7XVrpHR6eto9C9QGZLJRIyNNZ25ujox6Re7fv99ZWVnpZCTq1ixGlu169QP1w0hJBjk8uUQs7g0CCHj37t28LWQN1A8jI1n22LtCLsjWL2NBouyR2Xn06FFncXExP9IWkm1tbXVrBeqGkZAMglhy9cta2forz26QSke1J/MNmvUCo8HQSSaCkX0GfbyRvUQqKxAOAv5fgK1aXjQpcw+VZFqgQ7DbZB+b+chiPGrb7Xb37n/Bfa3TOB8HQDC7PLjJ/rphqCTTOqzKwG9ubvYIiRCYcYDN5k1bf45kn2x3d7fy3flstuf7ah8/fuyWNBdLS0vp27dv+XmW1dPa2lp+3hQMdcefzdanT5+my8vL/BoizMzMpNnZ2TQ5OZlevnyZl7969So/BlK+Oc2mNMiycvr9+3d+3iQM/bUSRNvY2EifPn3qlhRDBGTmLi8vj/WrInzCm4qTk5NcwMHBQbq4uEj7+/v5NcAnmqDZB4D0+fPn9ODBg/y6zhjp
+u0semXKsnHp0dNRzpEW2DmncY2IQ8LKfV2eaVMLDhw97E5F729vb6fXr1/l14wDJ6gg+fbLA1YI3c3T3zvjDfpJE+m1S3wb4VdsgfEgaBmpLMgs5pWhfjY/yCki/d5eWtAj7bP1AHdUn2PRniX/TJ2Xqsv3CuKjPsR9hPMGuIwK+oH/q4B8BGykr+lRN39IrsW2LgD75X/Vvu31Se5LhdDnTG8es1L2bHEZAbOBwnLZTCHwROX2w6Yd21CXwIk5Rn7S15KQtY7X6isjm+4SgRRCRfD1bXjSBZDPjscQpmrw24zGpLEEH3UQXKiMZDiMYDFRE4HibWWCd7oPpHX2dbhtshHbAZjSfjXCwSCSRHZ6w3uGMwZMTfYjKuO/hSVhUB2CPHRvn+Mn6g7aUWWhcjMfWpb0HhKIe9yGwjcN147oJpZOMARE0DZJBQTaceBtYw9BlCSRHqw/E6/fBRkQw62TIZsE99Nq2nEMyTwT/KLPBQRgjbbwtngD0WUQcC64ZK3rUB0f0I7bMt9V92so+9eUzqvUNBGMSqT4+8LoHQakkwxg5iwEWZZZBYA3jiF6AgRiqoMsZOMbCtvc6rBPRI6dxZMyUW90IwfWk1SNK0KNIIt2IbadxAO6hm/5sn7YO4Bod+NaSEVvQUeQrQcSnPfesX3wGt49ExoVI73Vrw0FQGslkQJGhg8IGWsZJF0ccjLNsQL3xPtiIHmmWYOjWJEC3iECW5J7qiUyWBLZPxuxJiS7KEelF7GSQPehnfKrj7aEN40GP7Qc7vX6fldBFOX30myTosnYzNq7Vz9+gNJKJ9X/CeBzgg4tDRAI5izKCo3rWUTiCIMg50qPAWvJxX+RFN9fo9hlQ+u26Dj2C6tvgcc24PQFsO41F+pWd8KFAe/WLHptlsBN40gm09fGw9lu/MVaurd2MR1myDJRGMhlsZ+tNwADqyhkSjJXDrLNwBNccucbxgmY7wrl00dbqkFAH52rM0m1JoUBQz5cB
+Bc3bAPGUpVTGfeAzJhB5RE5g68kXshsRMVTH+oL+6RvRRMI2kUhj8b60NljCloHSM5kCjREWGI9DMcDOQCsYjQMR6qELZ9nHgJxFGSJdHHEq/UgfOmywEYKrrGl122xlyaQsimAXQjsCoyBqDJTTJ+eeeAoodbgWVF/jVz1dC7YP+qaeytAhX2AX19b/8gn30Ml9zlUXaBwIY/fx+xuUvibTQAcVHEYgZZSCiqEE1MMG786dO7mzbdDQQyCk29ZHGGORbgJEOz1eBG8X9XxbrnUf3YyHiaJ21/UJIIet5+0R/KPTlqnck0uwY0GwwfocUEeklTCWMlDqu0te9L579y4dHh5eebELMiN77+YWFhbS/Px8evHiRSUveHkn+uHDhyu/2aR/yuIbHiNATrUxALOS2Uk2YkaSDezMLMoigeFgLEgGuXgc2PWO1jaI1h2B0aDRJCN7KVtBKq0xLMHKWlcE/hyNJZkW5Ih9FAbB6odGkswSjHMhCFZPNI5kPBJZewXBmoPGkUxkEsHsugyJRX790CiSQSibqSAam5CUkdm0SRmoFxr1d5782ARMT0/n/7rIT+jYbG21Wunnz5/N/aHFmKO2/7RYBP7WE0JBrGxdlv+Gc3V1NXbxa45GkSzQTMS/XwcqR5AsUDmCZIHKESQLVIyU/gViqUHdIehBagAAAABJRU5ErkJggv0ExEk96p/L+7oY8x7qAOdHGXtowLe5AqVRjDQKgYIZ6Te6KIR2bYq3MBY7JQi7Ve4KcztCYX0QP3ZWSAHxcjfnuTAeOyNI+8occR78W8EbwyMJbw1im29mSFPYDXZCEBLKcarIsT2IHbEkjn6/5JuZY1xhdxhOkCLHOEgE4mkckxyX7ZvuEDGcILzuixzbwyNqkiB/oSly7AdDCSI5bEWS3wdHJz7GkxzGlTgXOfaDYQTJX1RofExWEn8P/jsHV5C//devVfvFEIJwHDCBlcTt4S9W/FLl9xxvE54L+8Ww//7g
+7Di1aGdHgent27fL3sLv4N69e4tY8t8hXL16dRHTX79+TQ8fPlxKFPaFE1iyvC8UCg3qf5gqFDooghQKHRRBCoUOiiCFwkpM079f3AmfbnP7sQAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataElementStyle>Element</DataElementStyle>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportServerUrl>http://mlserver/ReportServer_2017</rd:ReportServerUrl>
+  <rd:ReportID>ed7e71f0-38cd-4c90-b766-c5ec9b7db6fa</rd:ReportID>
+</Report>

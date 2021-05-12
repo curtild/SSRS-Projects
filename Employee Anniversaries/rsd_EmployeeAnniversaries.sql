@@ -1,6 +1,6 @@
 /*
 Author:			
-	Lynn Curtis
+	Lynnetta Curtis
 Report:			
 	Anniversary Letters.rdl
 Date:			

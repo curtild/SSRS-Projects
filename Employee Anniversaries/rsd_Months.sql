@@ -13,6 +13,8 @@ DBMS:
 	SQL SERVER 2017, Developer Edition
 DB:				
 	AdventureWorks 2017
+Dependencies:
+	v_Employee_Anniversary.sql
 Retention:		
 	KP PERM
 */

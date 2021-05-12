@@ -1,3 +1,22 @@
+/*
+Author:			
+	Lynnetta Curtis
+Report:			
+	Anniversary Letters.rdl
+Date:			
+	Jan 2021
+Purpose:		
+	Demo - Employee Appreciation Letters
+Design Tool:	
+	SSRS/SSDT
+DBMS:			
+	SQL SERVER 2017, Developer Edition
+DB:				
+	AdventureWorks 2017
+Retention:		
+	KP PERM
+*/
+
 USE ADVENTUREWORKS2017
 GO
 IF OBJECT_ID('v_Employee_StartDates') IS NOT NULL

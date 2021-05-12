@@ -6,7 +6,7 @@ Report:
 Date:			
 	Jan 2021
 Purpose:		
-	Demo - Employee Appreciation Letters
+	Creates view of Employee Appreciation Letters data set. 
 Design Tool:	
 	SSRS/Visual Studio 2019 Community Edition
 DBMS:			

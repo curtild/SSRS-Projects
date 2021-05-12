@@ -6,7 +6,7 @@ Report:
 Date:			
 	Jan 2021
 Purpose:		
-	Populates Monthly Selection Dropdown Box
+	Populates Selection Dropdown Box
 Design Tool:	
 	SSRS/SSDT
 DBMS:			

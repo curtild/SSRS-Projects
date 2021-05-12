@@ -6,7 +6,7 @@ Report:
 Date:			
 	Jan 2021
 Purpose:		
-	Creates view of Employee Appreciation Letters data set. 
+	Creates view of Employee Anniversary Letters data set. 
 Design Tool:	
 	SSRS/Visual Studio 2019 Community Edition
 DBMS:			

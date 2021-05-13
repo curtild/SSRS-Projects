@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="srds_AdventureWorks2017">
-  <ConnectionProperties>
-    <Extension>SQL</Extension>
-    <ConnectString>Data Source=MLSERVER2\MLDEVSERVER_2017;Initial Catalog=AdventureWorks2017</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
-  </ConnectionProperties>
-  <DataSourceID>8135d418-d031-4300-b0a0-7128304cc3b4</DataSourceID>
-</RptDataSource>

@@ -6,7 +6,7 @@ Report:
 Date:			
 	Mar 2021
 Purpose:		
-	Demo - Purchase Orders
+	To create a purchase order detail view.
 Design Tool:	
 	SSRS/Visual Studio 2019 Community Edition
 DBMS:			

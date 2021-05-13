@@ -1,3 +1,22 @@
+/*
+Author:			
+	Lynnetta Curtis
+Report:			
+	PurchaseOrders.rdl
+Date:			
+	Mar 2021
+Purpose:		
+	To pull specific purchase order data.
+Design Tool:	
+	SSRS/Visual Studio 2019 Community Edition
+DBMS:			
+	SQL SERVER 2017, Developer Edition
+DB:				
+	AdventureWorks 2017
+Retention:		
+	KP PERM
+*/
+
 SELECT 
 PURCHASEORDER_ID, 
 PO_ORDERDATE, 

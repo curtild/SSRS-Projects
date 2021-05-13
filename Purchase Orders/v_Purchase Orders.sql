@@ -1,4 +1,25 @@
-IF OBJECT_ID(N'dbo.v_PurchaseOrderDetail',N'V') IS NOT NULL
+/*
+Author:			
+	Lynn Curtis
+Report:			
+	PurchaseOrders.rdl
+Date:			
+	Mar 2021
+Purpose:		
+	Demo - Purchase Orders
+Design Tool:	
+	SSRS/Visual Studio 2019 Community Edition
+DBMS:			
+	SQL SERVER 2017, Developer Edition
+DB:				
+	AdventureWorks 2017
+Dependencies:
+	[TABLE] dbo.MyBarcodes
+Retention:		
+	KP PERM
+*/
+
+IF OBJECT_ID(N'dbo.v_PurchaseOrderDetail', N'V') IS NOT NULL
 	DROP VIEW dbo.v_PurchaseOrderDetail;
 GO
 CREATE VIEW v_PurchaseOrderDetail 

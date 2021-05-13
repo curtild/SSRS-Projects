@@ -1,6 +1,6 @@
 /*
 Author:			
-	Lynn Curtis
+	Lynnetta Curtis
 Report:			
 	PurchaseOrders.rdl
 Date:			
@@ -13,8 +13,6 @@ DBMS:
 	SQL SERVER 2017, Developer Edition
 DB:				
 	AdventureWorks 2017
-Dependencies:
-	[TABLE] dbo.MyBarcodes
 Retention:		
 	KP PERM
 */

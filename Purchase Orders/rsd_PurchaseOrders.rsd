@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>srds_AdventureWorks2017</DataSourceReference>
+      <CommandText>SELECT PURCHASEORDER_ID, PO_ORDERDATE, REVISIONNUMBER, PO_MODIFIEDDATE, PO_STATUS, VENDOR_ID, VENDOR_NAME, ACCOUNTNUMBER, VENDOR_ADDRESSLINE1, VENDOR_ADDRESSLINE2, VENDOR_CITY, 
+                  VENDOR_STATEPROVINCENAME, VENDOR_POSTALCODE, VENDOR_COUNTRYREGIONNAME, VENDOR_STATUS, VENDOR_PURCHASING_URL, BUYER_ID, TITLE, FIRSTNAME, MIDDLENAME, LASTNAME, DEPARTMENT, JOBTITLE, 
+                  COMPANY, EMPLOYEE_ADDRESSLINE1, EMPLOYEE_ADDRESSLINE2, EMPLOYEE_CITY, EMPLOYEE_STATEPROVINCENAME, EMPLOYEE_POSTALCODE, EMPLOYEE_COUNTRYREGIONNAME, SHIPPING_METHOD_ID, 
+                  SHIPPING_METHOD, PURCHASEORDER_DETAIL_ID, PRODUCT_ID, PRODUCT_NAME, PRODUCT_NUMBER, PRODUCT_SIZE, COLOR, ITEM_DUEDATE, ITEM_MODIFIEDDATE, UNITPRICE, ORDERQTY, LINETOTAL, SUBTOTAL, TAXAMT, 
+                  FREIGHT, TOTALDUE, PO_SHIPDATE, BARCODE_IMAGE
+FROM     v_PurchaseOrderDetail
+WHERE  (PURCHASEORDER_ID IN ('0637', '0925'))</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PURCHASEORDER_ID">
+        <DataField>PURCHASEORDER_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_NAME">
+        <DataField>VENDOR_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PO_ORDERDATE">
+        <DataField>PO_ORDERDATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="REVISIONNUMBER">
+        <DataField>REVISIONNUMBER</DataField>
+        <rd:TypeName>System.Byte</rd:TypeName>
+      </Field>
+      <Field Name="PO_MODIFIEDDATE">
+        <DataField>PO_MODIFIEDDATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="PO_STATUS">
+        <DataField>PO_STATUS</DataField>
+        <rd:TypeName>System.Byte</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_ID">
+        <DataField>VENDOR_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ACCOUNTNUMBER">
+        <DataField>ACCOUNTNUMBER</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FIRSTNAME">
+        <DataField>FIRSTNAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_ADDRESSLINE1">
+        <DataField>VENDOR_ADDRESSLINE1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LASTNAME">
+        <DataField>LASTNAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_ADDRESSLINE2">
+        <DataField>VENDOR_ADDRESSLINE2</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_CITY">
+        <DataField>VENDOR_CITY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_STATEPROVINCENAME">
+        <DataField>VENDOR_STATEPROVINCENAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_POSTALCODE">
+        <DataField>VENDOR_POSTALCODE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_COUNTRYREGIONNAME">
+        <DataField>VENDOR_COUNTRYREGIONNAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_STATUS">
+        <DataField>VENDOR_STATUS</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="PRODUCT_NAME">
+        <DataField>PRODUCT_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="VENDOR_PURCHASING_URL">
+        <DataField>VENDOR_PURCHASING_URL</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ORDERQTY">
+        <DataField>ORDERQTY</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="UNITPRICE">
+        <DataField>UNITPRICE</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="BUYER_ID">
+        <DataField>BUYER_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="TITLE">
+        <DataField>TITLE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LINETOTAL">
+        <DataField>LINETOTAL</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="COMPANY">
+        <DataField>COMPANY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SUBTOTAL">
+        <DataField>SUBTOTAL</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="MIDDLENAME">
+        <DataField>MIDDLENAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TAXAMT">
+        <DataField>TAXAMT</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="EMPLOYEE_STATEPROVINCENAME">
+        <DataField>EMPLOYEE_STATEPROVINCENAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMPLOYEE_POSTALCODE">
+        <DataField>EMPLOYEE_POSTALCODE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FREIGHT">
+        <DataField>FREIGHT</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="DEPARTMENT">
+        <DataField>DEPARTMENT</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TOTALDUE">
+        <DataField>TOTALDUE</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="JOBTITLE">
+        <DataField>JOBTITLE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMPLOYEE_ADDRESSLINE1">
+        <DataField>EMPLOYEE_ADDRESSLINE1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMPLOYEE_ADDRESSLINE2">
+        <DataField>EMPLOYEE_ADDRESSLINE2</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMPLOYEE_CITY">
+        <DataField>EMPLOYEE_CITY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMPLOYEE_COUNTRYREGIONNAME">
+        <DataField>EMPLOYEE_COUNTRYREGIONNAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SHIPPING_METHOD_ID">
+        <DataField>SHIPPING_METHOD_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="SHIPPING_METHOD">
+        <DataField>SHIPPING_METHOD</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PURCHASEORDER_DETAIL_ID">
+        <DataField>PURCHASEORDER_DETAIL_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="PRODUCT_ID">
+        <DataField>PRODUCT_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="PRODUCT_NUMBER">
+        <DataField>PRODUCT_NUMBER</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PRODUCT_SIZE">
+        <DataField>PRODUCT_SIZE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COLOR">
+        <DataField>COLOR</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ITEM_DUEDATE">
+        <DataField>ITEM_DUEDATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="ITEM_MODIFIEDDATE">
+        <DataField>ITEM_MODIFIEDDATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="PO_SHIPDATE">
+        <DataField>PO_SHIPDATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="BARCODE_IMAGE">
+        <DataField>BARCODE_IMAGE</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

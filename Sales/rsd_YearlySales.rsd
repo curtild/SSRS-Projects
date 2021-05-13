@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>srds_AdventureWorks2017</DataSourceReference>
+      <CommandText>SELECT MONTH(ORDERDATE) AS MONTH, LEFT(DATENAME(MONTH, ORDERDATE), 3) AS Month_Name, YEAR(ORDERDATE) AS SALES_YEAR, SUM(TOTALDUE) AS TOTAL_SALES
+FROM    v_CustomerSales
+GROUP BY YEAR(ORDERDATE), MONTH(ORDERDATE), DATENAME(MONTH, ORDERDATE)
+ORDER BY SALES_YEAR, MONTH</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="MONTH">
+        <DataField>MONTH</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Month_Name">
+        <DataField>Month_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SALES_YEAR">
+        <DataField>SALES_YEAR</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="TOTAL_SALES">
+        <DataField>TOTAL_SALES</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

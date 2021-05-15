@@ -1,3 +1,23 @@
+/*
+Author:			
+	Lynnetta Curtis
+Report:			
+	PurchaseOrders.rdl
+Created:			
+	Mar 2021
+Purpose:		
+	To create a view of specific purchase order line items. 
+Design Tool:	
+	SSRS/Visual Studio 2019 Community Edition
+DBMS:			
+	SQL SERVER 2017, Developer Edition
+DB:				
+	AdventureWorks 2017
+Dependencies:
+	(TABLE) dbo_MyBarcodes
+Retention:		
+	KP PERM
+*/
 IF OBJECT_ID(N'dbo.v_PurchaseOrderDetail',N'V') IS NOT NULL
 	DROP VIEW dbo.v_PurchaseOrderDetail;
 GO

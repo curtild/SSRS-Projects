@@ -4,7 +4,7 @@
 ### In this repository you'll find samples of SSRS report projects that reflect projects found in nearly every organization. 
 
 ## Why SSRS?
-### If you think SSRS is dead, think again. Many companies that have made an investment in SSRS, and who may not seek cloud platforms for security reasons, still receive a great return on their investment. SSRS is a powerful tool for enterprise reporting. Though PowerBI is a great compliment to SSRS, there is still some functionality that hasn't been ported to PowerBI yet. So, SSRS is still here for now.
+### If you think SSRS is dead, think again. Many companies that have made an investment in SSRS, and who may not seek cloud platforms for security concerns, still receive a great return on their investment. SSRS is a powerful tool for enterprise reporting. Though PowerBI is a great compliment to SSRS, there is still some functionality that hasn't been ported to PowerBI yet. So, SSRS is still here for now.
 
 ## Why Not Microsoft Word?
 ### You may wonder if SSRS is overkill when there is Microsoft Word. Well, let me just tell you that Word isn't designed to handle enterprise reporting. Nor does it have subscriptions, etc., that would make it as powerful as SSRS.

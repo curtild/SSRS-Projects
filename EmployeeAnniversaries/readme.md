@@ -1,7 +1,10 @@
-## Project Sample — Employee Anniversaries
-<img src="/SSRS-Projects/EmployeeAnniversaries/AnniversaryLetter.png" />
+### <em>Report Sample — Employee Anniversaries</em>
+#### 👋 Report Description
 
-### Nearly every HR department celebrates employee anniversaries. This project is a sample of a typical form letter designed in SSRS to address such a need.
-### While building this project, I tried to keep the concept simple. The report contains a drop down selection box to allow a user to select any given month. 
-### The structure is as follows:
-- 
+#### Nearly every HR department celebrates employee anniversaries. This project is a sample of a typical form letter designed in SSRS.
+#### While building this project, I tried to keep the concept simple. The report contains a drop down selection box to allow a user to select any given month for employee anniversary letters. Typically, I've designed this report with conditional SQL to determine the next month ahead, in order to mail letters in advance.
+#### The report design is as follows:
+#### - A SQL view is driven by a monthly parameter to pull complete employee data with employment dates. <em>v_EmployeeData.sql</em> script is provided to create the view.
+#### - Embedded datasets <em>rsd_Employee_Anniversaries.rsd</em> and <em>rsd_Months.rsd</em> are created to pull data from the view. (SQL files are also provided.)
+
+#### Sample Letter: <a href="/EmployeeAnniversaries/AnniversaryLetter.png" height=750 width=550/>Anniversary Letter.pdf</a>

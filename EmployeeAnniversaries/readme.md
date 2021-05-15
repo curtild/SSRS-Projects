@@ -3,7 +3,7 @@
 
 #### Nearly every HR department celebrates employee anniversaries. This project is a sample form letter typically designed in SSRS.
 #### While building this project, I tried to keep the concept simple. The report contains a drop down selection box to allow a user to select any month to generate anniversary letters. Typically, I've designed this report with conditional SQL to select records for the next month ahead relative to the current date, in order to mail letters a little in advance.
-#### The report's data source is <a href="">Microsoft's AdventureWorks 2017 sample database</a>. (No proprietary data to worry with!)
+#### The report's data source is <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">Microsoft's AdventureWorks 2017 sample database</a>. (No proprietary data to worry with!)
 #### 👋 Report Design
 - #### A SQL view is driven by a monthly parameter to pull employee data with employment start dates. (<a href="/EmployeeAnniversaries/v_EmployeeData.sql"><em>v_EmployeeData.sql</em></a> script is provided to create the view.)
  - #### Embedded data sets <a href="/EmployeeAnniversaries/rsd_Employee_Anniversaries.rsd"><em>rsd_Employee_Anniversaries.rsd</em></a> and <a href="/EmployeeAnniversaries/rsd_Months.rsd"><em>rsd_Months.rsd</em></a> are created to pull data from the view. (SQL files <a href="rsd_EmployeeAnniversaries.sql"><em>rsd_Employee_Anniversaries.sql</em></a> and <a href="rsd_Months.sql"><em>rsd_Months.sql</em></a>  are provided to show SQL for both data sets.)

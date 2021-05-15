@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
-  <DataSet Name="rsd_PurchaseOrderDetail.rsd">
+  <DataSet Name="rsd_PurchaseOrders.rsd">
     <Query>
       <DataSourceReference>srds_AdventureWorks2017</DataSourceReference>
       <CommandText>SELECT PURCHASEORDER_ID, PO_ORDERDATE, REVISIONNUMBER, PO_MODIFIEDDATE, PO_STATUS, VENDOR_ID, VENDOR_NAME, ACCOUNTNUMBER, VENDOR_ADDRESSLINE1, VENDOR_ADDRESSLINE2, VENDOR_CITY, 

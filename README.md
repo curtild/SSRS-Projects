@@ -16,7 +16,7 @@
 - <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">The AdventureWorks 2017 Sample Database</a>
 - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53613#:~:text=Report%20Builder%20provides%20data%20visualizations,create%20reports%20and%20shared%20datasets.">Microsoft Report Builder</a>
 - <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019 Community Edition (Optional)</a>
-- <a href="https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15#ssdt-for-vs-2017-standalone-installer">The SQL Server Data Tools (SSDT Standalone Installer) for Visual Studio Versions Before Visual Studio 2019</a>
+- <a href="https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15#ssdt-for-vs-2017-standalone-installer">SQL Server Data Tools (SSDT Standalone Installer) for Visual Studio Versions Before Visual Studio 2019</a>
 - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=100122">Microsoft 2019 SQL Server Reporting Services</a>
 - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=55252">Microsoft 2017 SQL Server Reporting Services</a>
-- <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">Microsoft SQL Server Management Studio (To Query Data)</a>
+- <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">Microsoft SQL Server Management Studio (Optional, To Query Data)</a>

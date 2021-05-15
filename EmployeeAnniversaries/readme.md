@@ -1,7 +1,7 @@
 ### <em>Sample Report — Employee Anniversaries</em>
 #### 👋 Report Description
 
-#### Nearly every HR department celebrates employee anniversaries. This project is a sample form letter typically designed in SSRS.
+#### Nearly every HR department celebrates employee anniversaries. This sample report is a form letter typically designed in SSRS.
 #### While building this project, I tried to keep the concept simple. The report contains a drop down selection box to allow a user to select any month to generate anniversary letters. Typically, I've designed this report with conditional SQL to select records for the next month ahead relative to the current date, in order to mail letters a little in advance.
 #### The report's data source is <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">Microsoft's AdventureWorks 2017 sample database</a>. (No proprietary data to worry with!)
 #### 👋 Report Design

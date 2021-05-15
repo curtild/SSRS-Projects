@@ -1,7 +1,7 @@
 ### 👋  Welcome To My Github <a href="https://github.com/curtild/SSRS-Projects/"><em>SSRS Sample Projects</em></a> Repository!
 
 ### What's In This Repository?
-#### In this repository you'll find sample SSRS report projects that reflect projects found in nearly every organization. 
+#### In this repository you'll find sample SSRS report projects found in nearly every organization. 
 
 ### Why SSRS?
 #### If you think SSRS is dead, think again. Many companies that have made an investment in SSRS, and who may not seek cloud platforms for security concerns, still receive a great return on that investment. SSRS is a powerful tool for enterprise reporting. Though PowerBI is a great compliment to SSRS, there is still some functionality that hasn't been ported to PowerBI yet. So, SSRS is still here for now.

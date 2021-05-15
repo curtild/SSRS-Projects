@@ -1,7 +1,5 @@
 ## 👋  Welcome To My Github <a href="https://github.com/curtild/SSRS-Projects/"><em>SSRS Sample Projects</em></a> Repository!
 
-<img src="/Assets/Images/SSRS_logo.png" width="200" height="65"/>
-
 ## What's In This Repository?
 ### In this repository you'll find samples of SSRS report projects that reflect projects found in nearly every organization. 
 
@@ -13,5 +11,8 @@
 
 ## About SSRS Sample Projects
 ### The sample projects here are based on AdventureWorks databases provided by Microsoft, now housed here on Github. My projects were completed with AdventureWorks 2017, tested with Report Builder 3.0, and designed in Visual Studio 2019 Community Edition.
+
+## To follow along with these samples you'll need:
+- <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">The AdventureWorks 2017 Sample Database</a>
 
 

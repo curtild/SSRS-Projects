@@ -19,7 +19,7 @@ Retention:
 
 USE ADVENTUREWORKS2017
 GO
-IF OBJECT_ID('v_EmployeeData') IS NOT NULL
+IF OBJECT_ID(N'v_EmployeeData', N'V') IS NOT NULL
 	DROP VIEW v_EmployeeData
 GO
 CREATE VIEW v_EmployeeData

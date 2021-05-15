@@ -14,6 +14,6 @@
 
 ## To follow along with these samples you'll need:
 - <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">The AdventureWorks 2017 Sample Database</a>
-- <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53613#:~:text=Report%20Builder%20provides%20data%20visualizations,create%20reports%20and%20shared%20datasets.">The AdventureWorks 2017 Sample Database</a>
+- <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53613#:~:text=Report%20Builder%20provides%20data%20visualizations,create%20reports%20and%20shared%20datasets.">Microsoft Report Builder</a>
 
 

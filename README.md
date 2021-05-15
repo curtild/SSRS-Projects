@@ -1,5 +1,6 @@
 ## 👋  Welcome To My Github <a href="https://github.com/curtild/SSRS-Projects/"><em>SSRS Sample Projects</em></a> Repository!
-<img src="/assets/images/SSRS_logo.png" width="200" height="65"/>
+
+<img src="/Assets/Images/SSRS_logo.png" width="200" height="65"/>
 
 ## What's In This Repository?
 ### In this repository you'll find samples of SSRS report projects that reflect projects found in nearly every organization. 

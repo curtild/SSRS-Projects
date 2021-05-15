@@ -613,6 +613,6 @@ Bc3bAPGUpVTGfeAzJhB5RE5g68kXshsRMVTH+oL+6RvRRMI2kUhj8b60NljCloHSM5kCjREWGI9DMcDO
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <DataElementStyle>Element</DataElementStyle>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportServerUrl>http://mlserver2/ML2ReportServer_2017</rd:ReportServerUrl>
+  <rd:ReportServerUrl></rd:ReportServerUrl>
   <rd:ReportID>ed7e71f0-38cd-4c90-b766-c5ec9b7db6fa</rd:ReportID>
 </Report>

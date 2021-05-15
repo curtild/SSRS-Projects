@@ -2,7 +2,7 @@
 #### 👋 Report Description
 
 #### Nearly every HR department celebrates employee anniversaries. This sample report is a form letter typically designed in SSRS.
-#### While building this report, I tried to keep the concept simple. It contains a drop down selection box to allow a user to select any month to generate anniversary letters. Typically, I've designed this report with conditional SQL to select records for the next month ahead relative to the current date, in order to mail letters a little in advance.
+#### While building this report, I tried to keep the concept simple. The report contains a drop down selection box to allow a user to select any month to generate anniversary letters. Typically, I've designed this report with conditional SQL to select records for the next month ahead relative to the current date, in order to mail letters a little in advance.
 
 #### <a href="/EmployeeAnniversaries/AnniversaryLetterReportDesign.png">View the Report Design</a>
 

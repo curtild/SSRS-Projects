@@ -8,4 +8,4 @@
 - #### A SQL view is driven by a monthly parameter to pull employee data with employment start dates by month. (<a href=""><em>v_EmployeeData.sql</em></a> script is provided to create the view.)
  - #### Embedded datasets <a href=""><em>rsd_Employee_Anniversaries.rsd</em></a> and <a href=""><em>rsd_Months.rsd</em></a> are created to pull data from the view. (SQL files <a href=""><em>rsd_Employee_Anniversaries.sql</em></a> and <a href=""><em>rsd_Months.sql</em></a>  are also provided to show SQL for both data sets.)
 
-#### View Sample Letter: <a href="/EmployeeAnniversaries/AnniversaryLetter.png" height=750 width=550/>Anniversary Letter.pdf</a>
+#### View Sample Report: <a href="/EmployeeAnniversaries/AnniversaryLetter.png" height=750 width=550/>Anniversary Letter.pdf</a>

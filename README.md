@@ -12,8 +12,6 @@
 ### About My SSRS Sample Projects
 #### The sample projects here are based on AdventureWorks databases provided by Microsoft, housed here on Github. They were completed with AdventureWorks 2017, tested with Report Builder 3.0, and designed in Visual Studio 2019 Community Edition. For report design you may use either Visual Studio or Report Builder. Should you choose Report Builder, some functionality you get with Visual Studio may be unavailable. If you already have an earlier version of Visual Studio, and you don't have the Business Intelligence add-on SSDT (to create reports), a link to those tools is provided below. 
 
-#### Please adjust the report to include your own entry for your SSRS server. Please also create a shared data source named srds_AdventureWorks2017 to make the report run out of the box, or create your own data source then update your report definition.
-
 ### To follow along with these samples you'll need:
 #### - <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">The AdventureWorks 2017 Sample Database</a>
 #### - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53613#:~:text=Report%20Builder%20provides%20data%20visualizations,create%20reports%20and%20shared%20datasets.">Microsoft Report Builder</a>

@@ -1,4 +1,4 @@
-### <em>Report Sample — Employee Anniversaries</em>
+### <em>Sample Report — Employee Anniversaries</em>
 #### 👋 Report Description
 
 #### Nearly every HR department celebrates employee anniversaries. This project is a sample form letter typically designed in SSRS.

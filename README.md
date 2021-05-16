@@ -10,7 +10,7 @@
 #### You may wonder if SSRS is overkill when there is Microsoft Word. Well, let me just tell you that Word isn't designed to handle enterprise reporting. Nor does it have subscriptions, etc., that would make it as powerful as SSRS.
 
 #### About My SSRS Sample Projects
-#### The sample projects here are based on AdventureWorks databases provided by Microsoft, housed here on Github. They were completed with AdventureWorks 2017, tested with Report Builder 3.0, and designed in Visual Studio 2019 Community Edition. For report design you may use either Visual Studio or Report Builder. Should you choose Report Builder, some functionality you get with Visual Studio may be unavailable. If you already have an earlier version of Visual Studio, and you don't have the Business Intelligence add-on SSDT (to create reports), a link to those tools is provided below. 
+#### The sample projects here are based on AdventureWorks databases provided by Microsoft, housed here on Github. They were completed with AdventureWorks 2017, tested with Report Builder 3.0, and designed in Visual Studio 2019 Community Edition. If you'd like to follow along with these samples, for report design you may use either Visual Studio or Report Builder. Should you choose Report Builder, some functionality you get with Visual Studio may be unavailable. If you already have an earlier version of Visual Studio, and you don't have the Business Intelligence add-on SSDT (to create reports), a link to those tools is provided below. 
 
 #### To follow along with these samples you'll need:
 ##### - <a href="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15">SQL Server Installation Instructions</a>

@@ -11,6 +11,6 @@
    -  Create a shared data source named srds_AdventureWorks2017 in your report that points to the AdventureWorks 2017 database (or create your own data source name, then adjust your report definition) 
    -  Adjust the report to include your own entry for your SSRS server to preview the report. 
 
-#### <a href="/EmployeeAnniversaries/AnniversaryLetterReportDesign.png">View the Report Design</a>
+<!--#### <a href="/EmployeeAnniversaries/AnniversaryLetterReportDesign.png">View the Report Design</a>-->
 
 #### View Sample Report: <a href="/EmployeeAnniversaries/Anniversary%20Letters.pdf" height=750 width=550/>Anniversary Letters.pdf</a>

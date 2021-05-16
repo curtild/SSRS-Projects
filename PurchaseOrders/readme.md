@@ -5,7 +5,7 @@
 
 #### The report's data source is <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">Microsoft's AdventureWorks 2017 sample database</a>. (No proprietary data to worry with!)
 #### 👋 Report Design
-- #### A table is created to house barcodes for purchase orders. (<a href="/PurchaseOrders/CreateMyBarcodes.sql"><em>CreateMyBarcodes.sql</em></a> script is provided to create the table.)
+- #### A table is created (dbo.MyBarcodes) to house barcodes for purchase orders. (<a href="/PurchaseOrders/CreateMyBarcodes.sql"><em>CreateMyBarcodes.sql</em></a> script is provided to create the table.)
 - #### A SQL view is created to pull specific purchase orders '0637' and '0925'. (<a href="/PurchaseOrders/v_PurchaseOrderDetail.sql"><em>v_PurchaseOrderDetail.sql</em></a> script is provided to create the view.)
  - #### Embedded data set <a href="/PurchaseOrders/rsd_PurchaseOrders.rsd"><em>rsd_PurchaseOrders.rsd</em></a> is created to pull data from the view. (SQL file <a href="rsd_PurchaseOrders.sql"><em>rsd_PurchaseOrders.sql</em></a> is provided to show SQL for the data set.)
  - #### To make the report run out of the box you'll need to do 2 things: 

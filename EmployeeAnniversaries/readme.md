@@ -8,7 +8,7 @@
 - #### A SQL view (v_EmployeeData) is driven by a month parameter to pull employee data with employment start dates. (<a href="/EmployeeAnniversaries/v_EmployeeData.sql"><em>v_EmployeeData.sql</em></a> script is provided to create the view.)
  - #### Embedded data sets <a href="/EmployeeAnniversaries/rsd_Employee_Anniversaries.rsd"><em>rsd_Employee_Anniversaries.rsd</em></a> and <a href="/EmployeeAnniversaries/rsd_Months.rsd"><em>rsd_Months.rsd</em></a> are created to pull data from the view. (SQL files <a href="rsd_EmployeeAnniversaries.sql"><em>rsd_Employee_Anniversaries.sql</em></a> and <a href="rsd_Months.sql"><em>rsd_Months.sql</em></a> are provided to show SQL for both data sets.)
  - #### To make the report run out of the box you'll need to do 2 things: 
-   -  Create a shared data source named srds_AdventureWorks2017 (or create your own data source name, then adjust your report definition) 
+   -  Create a shared data source named srds_AdventureWorks2017 in your report that points to the AdventureWorks 2017 database (or create your own data source name, then adjust your report definition) 
    -  Adjust the report to include your own entry for your SSRS server to preview the report. 
 
 #### <a href="/EmployeeAnniversaries/AnniversaryLetterReportDesign.png">View the Report Design</a>

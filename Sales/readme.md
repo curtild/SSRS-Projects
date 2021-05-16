@@ -1,8 +1,7 @@
 #### <em>Sample Report — Sales</em>
 #### 👋 Report Description
 
-#### Sales snapshot reports are vital to any organization. This sample report is a typical report designed in SSRS.
-#### While building this report, I tried to keep the concept simple. I've included a simple column chart and a map, with text tables for sales by month and by state.
+#### Sales snapshot reports are vital to any organization. This sample report is a typical report designed in SSRS. While building this report, I tried to keep the concept simple. I've included a simple column chart and a map, with text tables for sales by month and by state.
 
 #### The report's data source is <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">Microsoft's AdventureWorks 2017 sample database</a>. (No proprietary data to worry with!)
 #### 👋 Report Design

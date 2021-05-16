@@ -8,7 +8,7 @@
 - #### A SQL view (v_CustomerSales) is created to pull U.S. data. (<a href="/Sales/v_CustomerSales.sql"><em>v_CustomerSales.sql</em></a> script is provided to create the view.)
  - #### Embedded data sets <a href="/Sales/rsd_StateSales.rsd"><em>rsd_StateSales.rsd</em></a> and <a href="/Sales/rsd_YearlySales.rsd"><em>rsd_YearlySales.rsd</em></a> are created to pull data from the view. (SQL files <a href="rsd_StateSales.sql"><em>rsd_StateSales.sql</em></a> and <a href="rsd_YearlySales.sql"><em>rsd_YearlySales.sql</em></a> are provided to show SQL for both data sets.)
  - #### To make the report run out of the box you'll need to do 2 things: 
-   -  Create a shared data source named srds_AdventureWorks2017 (or create your own data source name, then adjust your report definition) 
+   -  Create a shared data source named srds_AdventureWorks2017 in your report that points to the AdventureWorks 2017 database (or create your own data source name, then adjust your report definition) 
    -  Adjust the report to include your own entry for your SSRS server to preview the report. 
 
 #### View Sample Report: <a href="/Sales/Sales.pdf" height=750 width=550/>Sales.pdf</a>

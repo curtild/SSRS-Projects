@@ -1,7 +1,7 @@
 #### <em>Sample Report — Purchase Orders</em>
 #### 👋 Report Description
 
-#### Finance and Procurement departments typically issue purchase orders for necessary supplies. This report contains an advanced layout with QR codes for electronic processing.
+#### Finance and Procurement departments typically issue purchase orders to order necessary supplies. This report contains an advanced layout with QR codes for electronic processing.
 
 #### The report's data source is <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">Microsoft's AdventureWorks 2017 sample database</a>. (No proprietary data to worry with!)
 #### 👋 Report Design

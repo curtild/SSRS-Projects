@@ -1,6 +1,25 @@
+/*
+Author:			
+	Lynn Curtis
+Report:			
+	StoresByLocation.rdl
+Date:			
+	July 2020
+Purpose:		
+	Demo - Store Information
+Design Tool:	
+	SSRS/SSDT
+DBMS:			
+	SQL SERVER 2017, Developer Edition
+DB:				
+	AdventureWorks 2017
+Retention:		
+	KP PERM
+*/
+
 USE AdventureWorks2017
 GO
-IF OBJECT_ID('v_StoresByCity') IS NOT NULL
+IF OBJECT_ID(N'v_StoresByCity', N'V') IS NOT NULL
 	DROP View v_StoresByCity
 GO
 CREATE VIEW v_StoresByCity
@@ -56,7 +75,3 @@ INNER JOIN Person.StateProvince AS States
 ON Address_1.StateProvinceID = States.StateProvinceID 
 INNER JOIN Person.CountryRegion AS Countries
 ON Countries.CountryRegionCode = States.CountryRegionCode
-
-
-
-

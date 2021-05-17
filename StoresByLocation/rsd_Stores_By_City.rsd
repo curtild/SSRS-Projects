@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description />
+  <DataSet Name="rsd_Stores_By_City">
+    <Query>
+      <DataSourceReference>srds_AdventureWorks2017</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@City">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+        <DataSetParameter Name="@StateProvinceCode">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT
+Store_ID,
+StoreName,
+AddressLine1,
+AddressLine2,
+City,
+StateProvinceCode,
+StateName,
+PostalCode,
+CountryRegionCode,
+CountryName,
+Territory,
+Salesperson_ID,
+SPLastName,
+SPFirstName,
+SPMiddleName,
+Salesperson,
+SalesRepAddr1,
+SalesRepAddr2,
+SalesRepCity,
+SalesRepState,
+SalesRepPostalCode,
+SalesRepEmail,
+PhoneNumber,
+PhoneNumberType
+FROM
+v_StoresByCity
+WHERE (City = @City) AND (StateProvinceCode = @StateProvinceCode)
+ORDER BY Salesperson_ID, CountryName, StateName, City, StoreName</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Store_ID">
+        <DataField>Store_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="StoreName">
+        <DataField>StoreName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="AddressLine1">
+        <DataField>AddressLine1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="AddressLine2">
+        <DataField>AddressLine2</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>City</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StateProvinceCode">
+        <DataField>StateProvinceCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StateName">
+        <DataField>StateName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PostalCode">
+        <DataField>PostalCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CountryRegionCode">
+        <DataField>CountryRegionCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CountryName">
+        <DataField>CountryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Territory">
+        <DataField>Territory</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Salesperson_ID">
+        <DataField>Salesperson_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="SPLastName">
+        <DataField>SPLastName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SPFirstName">
+        <DataField>SPFirstName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SPMiddleName">
+        <DataField>SPMiddleName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Salesperson">
+        <DataField>Salesperson</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesRepAddr1">
+        <DataField>SalesRepAddr1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesRepAddr2">
+        <DataField>SalesRepAddr2</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesRepCity">
+        <DataField>SalesRepCity</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesRepState">
+        <DataField>SalesRepState</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesRepPostalCode">
+        <DataField>SalesRepPostalCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesRepEmail">
+        <DataField>SalesRepEmail</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PhoneNumber">
+        <DataField>PhoneNumber</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PhoneNumberType">
+        <DataField>PhoneNumberType</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -8,7 +8,7 @@ Date:
 Purpose:		
 	To pull sales representative and store data.
 Design Tool:	
-	SSRS/SSDT
+	SSRS/Visual Studio 2019 Community Edition
 DBMS:			
 	SQL SERVER 2017, Developer Edition
 DB:				

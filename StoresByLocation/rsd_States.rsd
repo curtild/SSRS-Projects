@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>srds_AdventureWorks2017</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@CountryCode">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT DISTINCT
+STATEID AS STATE_ID,
+STATE_NAME AS [STATE],
+COUNTRYCODE AS COUNTRY_ID,
+COUNTRY_NAME AS COUNTRY,
+COUNT(*) AS STORES
+FROM
+(SELECT STORE.BUSINESSENTITYID AS STORE_ID, 
+STORE.[NAME] AS STORE_NAME,
+ADDRESSLINE1,
+ADDRESSLINE2,
+CITY,
+STATES.STATEPROVINCEID AS STATEID,
+STATES.STATEPROVINCECODE AS STATECODE,
+STATES.[NAME] AS STATE_NAME,
+POSTALCODE,
+COUNTRIES.COUNTRYREGIONCODE AS COUNTRYCODE, 
+COUNTRIES.[NAME] AS COUNTRY_NAME
+FROM SALES.STORE AS STORE
+INNER JOIN PERSON.BUSINESSENTITY
+ON PERSON.BUSINESSENTITY.BUSINESSENTITYID=STORE.BUSINESSENTITYID
+INNER JOIN PERSON.BUSINESSENTITYADDRESS
+ON PERSON.BUSINESSENTITYADDRESS.BUSINESSENTITYID=PERSON.BUSINESSENTITY.BUSINESSENTITYID
+INNER JOIN PERSON.[ADDRESS]
+ON PERSON.BUSINESSENTITYADDRESS.ADDRESSID=PERSON.[ADDRESS].ADDRESSID
+INNER JOIN PERSON.STATEPROVINCE AS STATES
+ON PERSON.[ADDRESS].STATEPROVINCEID=STATES.STATEPROVINCEID
+INNER JOIN PERSON.COUNTRYREGION AS COUNTRIES
+ON STATES.COUNTRYREGIONCODE=COUNTRIES.COUNTRYREGIONCODE) AS STORES
+WHERE COUNTRYCODE = @CountryCode
+GROUP BY COUNTRYCODE, COUNTRY_NAME,STATEID, STATE_NAME,CITY
+HAVING COUNT(*) &gt;= 10
+ORDER BY STATEID, COUNTRYCODE;</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="STATE_ID">
+        <DataField>STATE_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="STATE">
+        <DataField>STATE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY_ID">
+        <DataField>COUNTRY_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY">
+        <DataField>COUNTRY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="STORES">
+        <DataField>STORES</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

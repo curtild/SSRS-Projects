@@ -6,7 +6,7 @@ Report:
 Date:			
 	July 2020
 Purpose:		
-	Demo - Store Information
+	To pull sales representative and store address data.
 Design Tool:	
 	SSRS/SSDT
 DBMS:			

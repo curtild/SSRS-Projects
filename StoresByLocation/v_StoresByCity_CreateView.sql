@@ -1,6 +1,6 @@
 /*
 Author:			
-	Lynn Curtis
+	Lynnetta Curtis
 Report:			
 	StoresByLocation.rdl
 Date:			

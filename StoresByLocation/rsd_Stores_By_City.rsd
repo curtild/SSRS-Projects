@@ -16,7 +16,8 @@
           <OmitFromQuery>false</OmitFromQuery>
         </DataSetParameter>
       </DataSetParameters>
-      <CommandText>SELECT
+      <CommandText>
+      SELECT
       Store_ID,
       StoreName,
       AddressLine1,

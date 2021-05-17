@@ -6,7 +6,7 @@ Report:
 Date:			
 	July 2020
 Purpose:		
-	To pull sales representative and store data.
+	To pull U.S. sales representative and store data.
 Design Tool:	
 	SSRS/Visual Studio 2019 Community Edition
 DBMS:			

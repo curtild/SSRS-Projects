@@ -13,7 +13,7 @@
 #### The sample projects here are based on AdventureWorks databases provided by Microsoft, housed here on Github. They were completed with AdventureWorks 2017, tested with Report Builder 3.0, and updated to Visual Studio 2019 Community Edition. If you'd like to follow along with these samples, for report design you may use either Visual Studio or Report Builder. Should you choose Report Builder, some functionality you get with Visual Studio may be unavailable. If you already have an earlier version of Visual Studio, and you don't have the Business Intelligence add-on SSDT (to create reports), a link to the tool is provided below. 
 
 #### To follow along with these samples you'll need:
-#### - <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">A Free Version of SQL Server</a>
+#### - <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">A Free, Local Version of SQL Server</a>
 #### - <a href="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15">SQL Server Installation Instructions</a>
 #### - <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">The AdventureWorks 2017 Sample Database</a>
 #### - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53613#:~:text=Report%20Builder%20provides%20data%20visualizations,create%20reports%20and%20shared%20datasets.">Microsoft Report Builder</a>

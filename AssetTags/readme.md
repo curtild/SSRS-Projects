@@ -1,7 +1,7 @@
 #### <em>Sample Report — Asset Tags</em>
 #### 👋 Report Description
 
-Most IT departments issue asset tags to track company assets such as desktops, laptops, equipment, etc. This report contains an advanced layout with QR codes for     electronic    tracking.
+Most IT departments issue asset tags to track company assets such as desktops, laptops, equipment, etc. This report contains an advanced 3-column layout with QR codes for     electronic    tracking.
 
 The report's data source is <a href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">Microsoft's AdventureWorks 2017 sample database</a>. (No         proprietary data to worry with!)
       

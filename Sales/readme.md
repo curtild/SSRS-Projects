@@ -7,7 +7,7 @@ The report's data source is <a href="https://github.com/Microsoft/sql-server-sam
 #### 👋 Report Design
 - #### A SQL view (v_CustomerSales) is created to pull U.S. data. (<a href="/Sales/v_CustomerSales.sql"><em>v_CustomerSales.sql</em></a> script is provided to create the view.)
  - #### Embedded data sets <a href="/Sales/rsd_StateSales.rsd"><em>rsd_StateSales.rsd</em></a> and <a href="/Sales/rsd_YearlySales.rsd"><em>rsd_YearlySales.rsd</em></a> are created to pull data from the view. ( FYI. The embedded data sets are illustrated with shared data set files.) (SQL files <a href="rsd_StateSales.sql"><em>rsd_StateSales.sql</em></a> and <a href="rsd_YearlySales.sql"><em>rsd_YearlySales.sql</em></a> are also provided to show SQL for both data sets.)
-#### To make the report run out of the box you'll need to do 2 things: 
+#### To make the report run out of the box (<a href="https://github.com/curtild/SSRS-Projects#to-follow-along-with-these-samples-youll-need">once you have the necessary software</a>) you'll need to do 2 things: 
    -  Create a shared data source named srds_AdventureWorks2017 in your report that points to the AdventureWorks 2017 database (or create your own data source name, then adjust your report definition) 
    -  Adjust the report to include your own entry for your SSRS server to preview the report. 
 
